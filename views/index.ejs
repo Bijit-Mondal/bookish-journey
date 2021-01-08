@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Grabber</title>
+</head>
+<body>
+  <nav class="nav_bar background">
+    <div class="logo">
+      <img src="/images/favi.svg" class="utube" draggable="false">
+      <b class="title">Grabber</b><hr class="mobile">
+    </div>
+    <p><a href="" class="items">Home</a></p>
+    <p><a href="" class="items a">About</a></p>
+    <p><a href="mailto:learnopedia@zohomail.in"  class="items b">Contact</a></p>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line2"></div>
+      <div class="line"></div>
+    </div>
+    <div class="bur">
+      <div class="line"></div>
+      <div class="line2"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  <!--search box-->
+  <div class="search_box">
+    <form action="javascript:Search()">
+      <input type="search" id="search" class="search" placeholder="Enter Keywords To Search"></input>
+      <button class="search_btn">Search</button>
+    </form>
+  </div>
+  <!--card-->
+  <div class="result">
+    
+  </div>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52421603-5"></script>
+  <script>
+    var nav_bar = document.querySelector('.nav_bar');
+    var burger = document.querySelector('.burger');
+    var bur = document.querySelector('.bur');
+    var items = document.querySelector(".items");
+    var items_a = document.querySelector('.a');
+    var items_b = document.querySelector('.b');
+    var onButtonClick = function(){
+      nav_bar.style.height = "250px";
+      items.style.display = "block";
+      items_a.style.display = "block";
+      items_b.style.display = "block";
+      burger.style.display ="none";
+      bur.style.display="block";
+    };
+    burger.addEventListener("click",onButtonClick);
+    var reverse = function(){
+      nav_bar.style.height = "72px";
+      items.style.display = "none";
+      items_a.style.display = "none";
+      items_b.style.display = "none";
+      burger.style.display ="block";
+      bur.style.display="none";
+    };
+    bur.addEventListener("click",reverse);
+  </script>
+  <script src="/javascripts/script.js"></script>
+  </body>
+</html>
